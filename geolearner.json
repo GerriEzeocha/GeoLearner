@@ -1,0 +1,20 @@
+[
+    {
+        "country":"Andorra",
+        "capital" : "Andorra la Vella",
+        "languages" : "Catalan (ca)",
+        "flag" : "https://img.geonames.org/flags/x/ad.gif"
+    },
+    {
+        "country":"United Arab Emirates",
+        "capital" : "Abu Dhabi",
+        "languages" : "Arabic, Persian, English, Hindi, Urdu",
+        "flag" : "https://img.geonames.org/flags/x/ae.gif"  
+    },
+    {
+        "country":"Antigua and Barbuda",
+        "capital" : "St John's",
+        "languages" : "English",
+        "flag" : "https://img.geonames.org/flags/x/ag.gif"  
+    }
+]
