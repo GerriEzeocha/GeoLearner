@@ -12,8 +12,15 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_MainWindow(object):
+    def openDef(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_defWindow()
+        self.ui.setupUi(self.windows)
+        
+        self.window.show()
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
+        MainWindow.setEnabled(True)
         MainWindow.resize(847, 682)
         MainWindow.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.0689655, y1:0.698864, x2:1, y2:0, stop:0.280788 rgba(96, 191, 186, 233), stop:1 rgba(255, 255, 255, 255));")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -95,15 +102,22 @@ class Ui_MainWindow(object):
         self.languageText.setObjectName("languageText")
         self.prevBtn = QtWidgets.QPushButton(self.centralwidget)
         self.prevBtn.setGeometry(QtCore.QRect(130, 270, 113, 32))
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        self.prevBtn.setFont(font)
+        self.prevBtn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.prevBtn.setStyleSheet("font-size: 15px;\n"
 "color: white;\n"
 "border: 1px solid black;")
         self.prevBtn.setObjectName("prevBtn")
         self.nextBtn = QtWidgets.QPushButton(self.centralwidget)
+        self.nextBtn.setEnabled(True)
         self.nextBtn.setGeometry(QtCore.QRect(620, 270, 113, 32))
+        self.nextBtn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.nextBtn.setStyleSheet("font-size: 15px;\n"
 "color: white;\n"
 "border: 1px solid black;")
+        self.nextBtn.setDefault(False)
         self.nextBtn.setObjectName("nextBtn")
         self.flagView = QtWidgets.QLabel(self.centralwidget)
         self.flagView.setEnabled(False)
@@ -116,20 +130,20 @@ class Ui_MainWindow(object):
         self.flagView.setOpenExternalLinks(True)
         self.flagView.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
         self.flagView.setObjectName("flagView")
+        self.geoLabel.raise_()
         self.countryLabel.raise_()
         self.languageLabel.raise_()
         self.capitalLabel.raise_()
-        self.geoLabel.raise_()
-        self.countryText.raise_()
-        self.capitalText.raise_()
         self.languageText.raise_()
+        self.flagView.raise_()
+        self.capitalText.raise_()
+        self.countryText.raise_()
         self.prevBtn.raise_()
         self.nextBtn.raise_()
-        self.flagView.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        self.statusBar = QtWidgets.QStatusBar(MainWindow)
+        self.statusBar.setObjectName("statusBar")
+        MainWindow.setStatusBar(self.statusBar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)

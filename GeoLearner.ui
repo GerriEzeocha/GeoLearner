@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -223,6 +226,14 @@ color: white;</string>
       <height>32</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">font-size: 15px;
 color: white;
@@ -233,6 +244,9 @@ border: 1px solid black;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="nextBtn">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>620</x>
@@ -241,6 +255,9 @@ border: 1px solid black;</string>
       <height>32</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">font-size: 15px;
 color: white;
@@ -248,6 +265,9 @@ border: 1px solid black;</string>
     </property>
     <property name="text">
      <string>NEXT</string>
+    </property>
+    <property name="default">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLabel" name="flagView">
@@ -284,21 +304,18 @@ border: 1px solid black;</string>
      <set>Qt::NoTextInteraction</set>
     </property>
    </widget>
+   <zorder>geoLabel</zorder>
    <zorder>countryLabel</zorder>
    <zorder>languageLabel</zorder>
    <zorder>capitalLabel</zorder>
-   <zorder>graphicsView</zorder>
-   <zorder>geoLabel</zorder>
-   <zorder>pushButton_2</zorder>
-   <zorder>pushButton_3</zorder>
-   <zorder>countryText</zorder>
-   <zorder>capitalText</zorder>
    <zorder>languageText</zorder>
+   <zorder>flagView</zorder>
+   <zorder>capitalText</zorder>
+   <zorder>countryText</zorder>
    <zorder>prevBtn</zorder>
    <zorder>nextBtn</zorder>
-   <zorder>flagView</zorder>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <resources/>
  <connections/>
